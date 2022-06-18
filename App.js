@@ -9,7 +9,7 @@ const App = () => {
   const handleChangeToggle = () => setToggle(oldToggle => !oldToggle);
 
   useEffect(() => {
-    
+   
     Torch.switchState(toggle);
   }, [toggle]);
 
@@ -19,7 +19,6 @@ const App = () => {
       setToggle(oldToggle => !oldToggle);
     });
 
-    
     return () => subscription.remove();
   }, []);
 
